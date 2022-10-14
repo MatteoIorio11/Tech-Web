@@ -16,7 +16,7 @@
         <!-- NAV BAR WITH FOUR LINKS -->
         <nav>
             <ul> 
-                <li> <a href=".">Home</a> </li>
+                <li> <a href="./index.html">Home</a> </li>
                 <li> <a href="./archivio.html">Archivio</a> </li>
                 <li> <a href="./contatti.html">Contatti</a> </li>
                 <li> <a href="./login.html">Login</a> </li>
@@ -27,12 +27,23 @@
             <!-- BEGIN OF THE FORM -->
             <form action="#" method="POST">
                 <h2>Login</h2>
-                <label>
-                    
-                </label>
-                <label>
-
-                </label>
+                <ul>
+                    <li>
+                        <label for="username">
+                            Username : 
+                        </label>
+                        <input id="usernamme" type="text" name="username" required>
+                    </li>
+                    <li>
+                        <label for="password">
+                            Password : 
+                        </label>
+                        <input id="password" type="password" name="password" required>
+                    </li>
+                    <li>
+                        <input type="submit" name="submit" value="invia">
+                    </li>
+                </ul>
             </form>
          </main>
 
