@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
     <!-- TITLE OF THE WEB SITE -->
     <!-- the lang attribute is a MUST -->
     <head lang="it">
@@ -17,38 +17,37 @@
         <nav>
             <ul> 
                 <li> <a href=".">Home</a> </li>
-                <li> <a href="./pages/archivio.html">Archivio</a> </li>
-                <li> <a href="./pages/contatti.html">Contatti</a> </li>
-                <li> <a href="./pages/login.html">Login</a> </li>
+                <li> <a href="./archivio.html">Archivio</a> </li>
+                <li> <a href="./contatti.html">Contatti</a> </li>
+                <li> <a href="./login.html">Login</a> </li>
             </ul>
         </nav>
         
+
+
         <main>
         <!-- TABLE WITH DATAS -->
+            <h2>Autori del Blog</h2>
             <section>
-                <title>
-                    <h2>Autori del Blog</h2>
-                </title>
-
                 <table>
                     <thead>
                         <!-- FIRST ROW OF ELEMENTS, ALL HEADERS -->
                         <tr>
-                            <th id="autore">Autore</th>
-                            <th id="email">Email</th>
-                            <th id="argomenti">Argomenti</th>
+                            <th id="autore" scope="col">Autore</th>
+                            <th id="email" scope="col">Email</th>
+                            <th id="argomenti" scope="col">Argomenti</th>
                         </tr>
                     </thead>
                     <!-- ALL THE DATAS -->
                     <tbody>
                         <tr>
-                            <th id="gino" headers="autore gino">Gino Pino</th>
+                            <th id="gino" headers="autore gino" scope="row">Gino Pino</th>
                             <td headers="email gino"><a href="mailto:ginopino@blogtw.com">ginopino@blogtw.com</a></td>
                             <td headers="argomenti gino">HTML, CSS, JS</td>
                         </tr>
                         <tr>
-                            <th id="cippa" headers="autore cippa">Cippa Lippa</th>
-                            <td headers="emai cippa"><a href="mailto:cippalippa@blogtw.com">cippalippa@blogtw.com</a></td>
+                            <th id="cippa" headers="autore cippa" scope="row">Cippa Lippa</th>
+                            <td headers="email cippa"><a href="mailto:cippalippa@blogtw.com">cippalippa@blogtw.com</a></td>
                             <td headers="argomenti cippa">PHP</td>
                         </tr>
                     </tbody>
