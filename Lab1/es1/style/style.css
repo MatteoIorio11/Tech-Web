@@ -4,5 +4,13 @@ body, header, h1, h2, ul{
 }
 body {
     background-color: #e4e4e4;
-    
+}
+/*
+Tutti gli header figli di body, tutti i footer figli di body
+*/
+body>header, body>footer{
+    background-color: rgb(54,54,54);
+    color: #fff; /*Colore testo*/
+    text-align: center; /*Allineamento del testo*/
+    padding: 20px 0px; /*Spaziatura*/
 }
