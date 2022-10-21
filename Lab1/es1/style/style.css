@@ -13,4 +13,20 @@ body>header, body>footer{
     color: #fff; /*Colore testo*/
     text-align: center; /*Allineamento del testo*/
     padding: 20px 0px; /*Spaziatura*/
+    font-family: 'Courier New', Courier, monospace;/*Stile di carattere del titolo e del footer*/
+}
+
+nav{
+    background-color: #e4e4e4;
+    margin: 0 5%;
+}
+
+nav ul{
+    list-style-type: none; /*list-style: none; è identito */
+    
+}
+
+nav ul li{
+    display: inline-block;
+    width: 45%;
 }
