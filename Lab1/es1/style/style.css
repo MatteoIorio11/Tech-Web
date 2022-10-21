@@ -127,5 +127,8 @@ aside section nav div img{
 }
 
 @media screen and (min-width: 768px) {
-    
+    main, aside{
+        display: inline-block;
+        
+    }
 }
