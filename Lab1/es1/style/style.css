@@ -16,7 +16,7 @@ body>header, body>footer{
     font-family: 'Courier New', Courier, monospace;/*Stile di carattere del titolo e del footer*/
 }
 
-nav{
+nav, main{
     margin: 0 5%;
 }
 
@@ -50,6 +50,7 @@ nav ul li a:hover{
     color: rgb(219, 69, 83);
 }
 
-main{
-    margin: 0 5%;
+article{
+    background-color: white;
+    border: 1px #cacaca;
 }
