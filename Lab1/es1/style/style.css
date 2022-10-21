@@ -60,3 +60,8 @@ article>header{
     height: 200px;
     text-align: center;
 }
+
+article > header img{
+    max-height: 100%;
+    max-width: 100%;
+}
