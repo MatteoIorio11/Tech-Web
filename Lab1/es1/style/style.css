@@ -81,3 +81,11 @@ article footer{
     text-align: right;
     padding: 20px 5% 5%;
 }
+article footer a{
+    background-color: #dddddd;
+    color: black;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-decoration: none;/*Leviamo la sottolineatura*/
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
