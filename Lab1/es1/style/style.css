@@ -25,7 +25,7 @@ nav ul{
     
 }
 
-nav ul li{
+body>nav ul li{
     display: inline-block;
     width: 45%;
     text-align: center;
@@ -102,4 +102,26 @@ aside{
     background-color: white;
     border: 1px solid #cacaca;
     margin: 20px 5% 20px;
+}
+
+aside section{
+    padding: 20px 5%;
+}
+
+aside section h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+aside section ul li a{
+    font-weight: bold;
+    color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+aside section nav div img{
+    margin-bottom: 10px;
+    width: 50px;
+    float: left;
+    margin-right: 5px;
 }
