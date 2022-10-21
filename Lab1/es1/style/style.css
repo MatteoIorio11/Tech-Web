@@ -72,6 +72,12 @@ article > header h2, article > header p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-article section{
+section article {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+}
+
+footer{
+    text-align: right;
+    
 }
