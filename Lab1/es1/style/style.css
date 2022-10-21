@@ -51,6 +51,7 @@ nav ul li a:hover{
 }
 
 article{
-    background-color: white;
-    border: 1px #cacaca;
+    background-color: #ffffff;
+    border: 1px solid #cacaca;
+    margin-top: 20px;
 }
