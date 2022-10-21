@@ -129,6 +129,15 @@ aside section nav div img{
 @media screen and (min-width: 768px) {
     main, aside{
         display: inline-block;
-        
+        vertical-align: top;
+    }
+
+    main{
+        width: 50%;
+        margin: 20px 5% 0 10% ;
+    }
+    aside{
+        width: 25%;
+        margin: 20px 5% 0 0 ;
     }
 }
