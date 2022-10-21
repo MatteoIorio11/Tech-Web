@@ -72,6 +72,10 @@ article > header h2, article > header p{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+article p{
+    margin: 5px 0;
+}
+
 section article {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 20px;
@@ -87,5 +91,15 @@ article footer a{
     border-radius: 5px;
     padding: 5px 10px;
     text-decoration: none;/*Leviamo la sottolineatura*/
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+article footer a:hover{
+    color: rgb(219, 69, 83);
+}
+
+aside{
+    background-color: white;
+    border: 1px solid #cacaca;
+    margin: 20px 5% 20px;
 }
