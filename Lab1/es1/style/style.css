@@ -125,3 +125,7 @@ aside section nav div img{
     float: left;
     margin-right: 5px;
 }
+
+@media screen and (min-width: 768px) {
+    
+}
