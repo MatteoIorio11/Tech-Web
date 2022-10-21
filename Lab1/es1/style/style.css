@@ -17,7 +17,6 @@ body>header, body>footer{
 }
 
 nav{
-    background-color: #e4e4e4;
     margin: 0 5%;
 }
 
@@ -29,4 +28,15 @@ nav ul{
 nav ul li{
     display: inline-block;
     width: 45%;
+    text-align: center;
+    background-color: rgb(54,54,54);
+    margin: 10px 0 0;
+}
+
+nav ul li:nth-child(odd){
+    margin-right: 5%;
+}
+
+nav ul li a {
+
 }
