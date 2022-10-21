@@ -69,5 +69,5 @@ article > header img{
 article > header h2, article > header p{
     text-align: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    padding: 0 5%;
 }
