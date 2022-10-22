@@ -1,62 +1,92 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog TW - Login</title>
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-</head>
-<body>
-    <header>
-        <h1>Blog di Tecnologie Web</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li><li><a href="archivio.html">Archivio</a></li><li><a href="contatti.html">Contatti</a></li><li><a href="login.html">Login</a></li>
-        </ul>
-    </nav>
-    <main>
-        <form action="#" method="POST">
-            <h2>Login</h2>
-            <ul>
-                <li>
-                    <label for="username">Username:</label><input type="text" id="username" name="username" />
-                </li>
-                <li>
-                    <label for="password">Password:</label><input type="password" id="password" name="password" />
-                </li>
-                <li>
-                    <input type="submit" name="submit" value="Invia" />
-                </li>
+<html>
+    <!-- TITLE OF THE WEB SITE -->
+    <!-- the lang attribute is a MUST -->
+    <head lang="it">
+        <title> Blog di Tecnologie Web - Login</title>
+        <link rel="stylesheet" href="style/style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <!-- HEADER OF OUR PAGE -> h1 is the title -->
+        <header>
+            <h1>Blog di Tecnologie Web</h1>
+        </header>
+
+        <!-- NAV BAR WITH FOUR LINKS -->
+        <nav>
+            <ul> 
+                <li> <a href="./index.html">Home</a> </li>
+                <li> <a href="./archivio.html">Archivio</a> </li>
+                <li> <a href="./contatti.html">Contatti</a> </li>
+                <li> <a href="./login.html">Login</a> </li>
             </ul>
-        </form>
-    </main><aside>
-        <section>
-            <h2>Post Popolari</h2>
-            <ul>
-                <li>
-                    <img src="img/html5-js-css3.png" alt="" />
-                    <a href="#">Intro alle Tecnologie Web Client Side</a>
-                </li>
-                <li>
-                    <img src="img/php.png" alt="" />
-                    <a href="#">Intro alle Tecnologie Web Server Side</a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Categorie</h2>
-            <ul>
-                <li><a href="#">HTML</a></li>
-                <li><a href="#">CSS</a></li>
-                <li><a href="#">PHP</a></li>
-                <li><a href="#">Javascript</a></li>
-                <li><a href="#">jQuery</a></li>
-                <li><a href="#">Apache</a></li>
-            </ul>
-        </section>
-    </aside>
-    <footer>
-        <p>Tecnologie Web - A.A. 2019/2020</p>
-    </footer>
-</body>
-</html>
+        </nav>
+
+        <main>
+            <!-- BEGIN OF THE FORM -->
+            <form action="#" method="POST">
+                <h2>Login</h2>
+                <ul>
+                    <!-- username -->
+                    <li>
+                        <label for="username">
+                            Username : 
+                        </label>
+                        <input id="usernamme" type="text" name="username" required>
+                    </li>
+                    <!-- password -->
+                    <li>
+                        <label for="password">
+                            Password : 
+                        </label>
+                        <input id="password" type="password" name="password" required>
+                    </li>
+                    <!-- button -->
+                    <li>
+                        <input type="submit" name="submit" value="invia">
+                    </li>
+                </ul>
+            </form>
+         </main>
+
+        <!-- POPULAR POSTS SECTION -->
+        <aside>
+            <!-- POPULAR POSTS-->
+            <section>
+                <h2>Post Popolari</h2>
+                <nav>
+                    <div>
+                        <img src="./images/html5-js-css3.png" alt="Tecnologie del web : HTML, JavaScript, CSS">
+                        <a href="#">Intro alle Tecnologie Web Client Side</a>
+                    </div> 
+
+                    <div>
+                        <img src="./images/php.png" alt="Tecnologia PHP">
+                        <a href="#">Intro alle Tecnologie Web Server Side</a>
+                    </div> 
+                </nav>
+            </section>
+
+            <!-- CATEGORIES SECTION -->
+            <section>
+                <h2>Categorie</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">HTML</a></li>
+                        <li><a href="#">CSS</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">jQuery</a></li>
+                        <li><a href="#">Apache</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </aside>
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Tecnologie Web - A.A 2019/2020</p>
+        </footer>
+    </body>
