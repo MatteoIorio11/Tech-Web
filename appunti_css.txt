@@ -1,0 +1,72 @@
+CSS : Foglio di stile a cascata.
+
+
+SFONDO :
+    * background
+    * background-size : (width, height) permette di specificare la dimensione delle immagini di sfondo
+    * background-origin : allows to deploy the imahe in the content-box, padding-box or in the border-box
+    -- IMAGE AS BACKGROUND --
+        * background : url(image.jpg)
+    * border : (dimension of the border, color,type of the border) 2px solid
+    * border-image : (url(image.jpg) 30 30 round)allows to specify an image as border
+    * border-radius : (top, right, left, bottom ) allows to specify rounded borders    
+
+BOX :
+    * box-shadow : (color, top, right, left, bottom) allows to specify the shadow of our box
+    * resize : allows to resize the box
+    
+CARATTERI :
+    * font-family : specify the name of our font
+    * font-style : specify the strile = nomal, oblique, italic, strong, ...
+    * color : color of the text
+    * letter-spacing : spacing between every char
+    * text-align : left, right, center, justify
+    * text-overflow : specify how to manage the text when there is an overflow
+
+PROPRIETA DELLE LISTE : 
+    * list-style-position : position of the marker (inside, outside)
+    * list-style-image : specify an image as marker
+    * list-style-type : specify the type of the marker
+
+------ MEDIA QUERY ------
+@[KEY] (RULE)
+
+ANIMAZIONI:
+    @keyframes NAME{
+        KeyFrameSelector{ ...}
+    }
+properties :
+1) animation-time : name of the animation
+2) animation-duration : duration of the animation
+3) animation-timing-function : velocity of the animation
+4) animation-delay : when the animation is going to start
+5) animation-play-state : when the animation starts or has to be stopped 
+
+
+
+
+<link rel="stylesheet" media="media-query" href="style.css">
+@media not|only mediatype and(mediafeature and|or|not mediafeature) {
+    CSS
+}
+MEDIATYPE:
+    * All : all the appliancies 
+    * Print : identify a printer
+    * Screen : a generic screen
+    * Speech : screen reader
+
+MEDIA FEATURES:
+    * width : the width of the browser's screen
+        min-width
+        max-width
+    * heigth : the height of the browser's screen
+    * orientation : device's orientation (landscape : height > widht, portrait : widht > height)
+
+META VIEWPORT:
+    <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+        * width=devide-width ==> set the width as the device's width
+        * initial-scale=1.0 ==> set the level of zoom 
+
+
+
+
