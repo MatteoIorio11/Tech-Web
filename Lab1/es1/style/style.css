@@ -73,13 +73,14 @@ article > header img{
     max-width: 100%;
 }
 
-article > header h2, article > header p{
+article header h2, section article header p{
     text-align: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 5px 0;
 }
 
 article p{
-    margin: 5px 0;
+    margin: 10% 0;
 }
 
 section article {
