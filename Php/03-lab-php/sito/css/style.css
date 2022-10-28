@@ -149,8 +149,8 @@ main > section{
 
 table{
     width: 100%;
-    border-spacing: 0;
-    border-collapse: collapse;
+    border-spacing: 0; /*Spazio tra i bordi delle celle*/
+    border-collapse: collapse; /*Riguarda le celle adiacenti, i bordi sinistri e destri vengono collassati in un unico bordo*/
 }
 
 table td, table th{
@@ -170,7 +170,7 @@ aside{
     margin: 0 5% 20px;
     background-color:#fff;
     border: 1px solid #cacaca;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Serve per fare in modo che il box e il padding siano, 1px del bordo dell'aside è compreso nella larghezza*/
 }
 
 aside > section{
