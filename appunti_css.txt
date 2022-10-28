@@ -4,7 +4,7 @@ CSS : Foglio di stile a cascata.
 SFONDO :
     * background
     * background-size : (width, height) permette di specificare la dimensione delle immagini di sfondo
-    * background-origin : allows to deploy the imahe in the content-box, padding-box or in the border-box
+    * background-origin : allows to deploy the image in the content-box, padding-box or in the border-box
     -- IMAGE AS BACKGROUND --
         * background : url(image.jpg)
     * border : (dimension of the border, color,type of the border) 2px solid
