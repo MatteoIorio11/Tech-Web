@@ -36,7 +36,7 @@ body > nav, body > aside, body > section{
 L’elemento <section> deve occupare il 50% della larghezza e deve avere padding
  e margin simili a quelli mostrati nello screenshot.
 */
-body > section{
+section{
     width: 50%;
     margin: 20px 10px;
     padding: 10px 25px;
@@ -46,7 +46,7 @@ body > section{
 /*
 I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero.
 */
-body > section p{
+section p{
     text-align: left;
     color: black;
 }
@@ -68,23 +68,50 @@ Gli elementi della lista in <nav> mostrano un quadratino come simbolo,
 sono allineati a sinistra
 ed hanno interlinea pari a 2 volte il valore di default.
 */
-body > nav ul{
+nav ul{
     list-style: square;
     text-align: left;
     line-height: 220%;
 }
 /*I link in <nav> in caso di hover vengono mostrati con sfondo viola, colore bianco,
  in grassetto e con un padding pari ad almeno l’1%.*/
-body > nav ul li a:hover{
+nav ul li a:hover{
     background-color: #B300FF;
     color: white;
     font-weight: bold;
     padding: 1%;
 }
 /*In caso di hover sull’elelmento <nav> allora l’ordine dei colori del gradiente viene invertito.*/
-body > nav:hover{
+nav:hover{
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
 }
-body > aside{
+/*
+L’elemento <aside> deve occupare il 20% della larghezza e i suoi paragrafi devono avere colore viola.
+*/
+aside{
     width: 20%;
+    margin: 20px 10px;
+    padding: 10px 25px;
+
+}
+aside p{
+    color: #B300FF;
+}
+
+/*L’elemento <footer> ha come sfondo un gradiente che varia dai seguenti colori (in diagonale, dall’angolo in basso a destra all’angolo in alto a sinistra): rosa, giallo, rosa, viola.
+La sua larghezza è pari al 100%. 
+Margin e padding devono essere simili a quelli riportati nello screenshot.*/
+
+footer{
+    border-top: 2px solid #B300FF;
+    background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
+    width: 100%;
+    margin: 10px 0px;
+    padding: 15px 0px;
+}
+/*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
+footer p{
+    text-align: center;
+    color: #B300FF;
+    font-size: 80%;
 }
