@@ -1,0 +1,90 @@
+/*Tutti i font devono avere la stessa font-family, che deve essere monospace. La dimensione deve essere del 100%. */
+html{
+    font-family: monospace;
+    font-size: 100%;
+}
+/*
+L’elemento di intestazione <header> ha come sfondo un gradiente che varia dai seguenti colori (in diagonale, dall’angolo in alto a sinistra all’angolo in basso a destra): rosa, giallo, rosa, viola. 
+La sua larghezza è pari al 100%.
+ Margin e padding devono essere simili a quelli riportati nello screenshot.
+ Il bordo inferiore è di colore viola ed ha uno spessore simile a quello mostrato nello screenshot.
+*/
+
+header{
+    background: linear-gradient(to bottom right, pink, yellow, pink, #B300FF );   
+    width: 100%;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #B300FF;
+}
+/*
+Il testo in <header> è di colore viola ed è allineato a destra.
+*/
+header h1{
+    color: #B300FF;
+    text-align: right;
+}
+/*
+L’elemento <nav>, l’elemento <aside> e l’elemento <section> sono affiancati, uno accanto all’altro.
+*/
+body > nav, body > aside, body > section{
+    display: inline-block;
+    vertical-align: top;    
+}
+/*
+L’elemento <section> deve occupare il 50% della larghezza e deve avere padding
+ e margin simili a quelli mostrati nello screenshot.
+*/
+body > section{
+    width: 50%;
+    margin: 20px 10px;
+    padding: 10px 25px;
+
+}
+
+/*
+I paragrafi figli di <section> sono allineati sinistra e il testo è di colore nero.
+*/
+body > section p{
+    text-align: left;
+    color: black;
+}
+/*
+L’elemento <nav> deve occupare il 15% della larghezza
+e deve avere padding e margini simili a quelli mostrati nello screenshot.
+Lo sfondo di <nav> consiste in un gradiente uguale a quello di <header>
+*/
+body nav{
+    width: 15%;
+    margin: 10px 10px;
+    padding: 5% 5px;
+    background: linear-gradient(to bottom right, pink, yellow, pink, #B300FF );
+    border-top: 2px solid #B300FF;
+    border-bottom: 2px solid #B300FF;
+}
+/*
+Gli elementi della lista in <nav> mostrano un quadratino come simbolo,
+sono allineati a sinistra
+ed hanno interlinea pari a 2 volte il valore di default.
+*/
+body > nav ul{
+    list-style: square;
+    text-align: left;
+    line-height: 220%;
+}
+/*I link in <nav> in caso di hover vengono mostrati con sfondo viola, colore bianco,
+ in grassetto e con un padding pari ad almeno l’1%.*/
+body > nav ul li a:hover{
+    background-color: #B300FF;
+    color: white;
+    font-weight: bold;
+    padding: 1%;
+}
+/*In caso di hover sull’elelmento <nav> allora l’ordine dei colori del gradiente viene invertito.*/
+body > nav:hover{
+    background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
+}
+body > aside{
+    width: 20%;
+}
