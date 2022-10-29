@@ -1,0 +1,35 @@
+Una pagina PHP è composta da sezioni di HTML e sezioni in cui ci sono delle componenti scritte il linguaggio PHP. 
+
+Il primo file che viene eseguito è il file : "index.php". Al suo interno possiamo trovare delle chiamate ad altri file php,
+attraverso la chiamata di funzione "require_once("my_file.php")". Una volta che l'index.php trova tale chiamata a funzione, 
+entrerà in tale file ed inizierà ad eseguire al suo interno tutte le operazione che esso contiene. Nel caso in cui ci 
+dovessero essere altri "require_once("another_file.php")" si continuerebbe il procedimento precedente in maniera ricorsiva.
+
+
+All'interno del file index.php è necessario che ci sia un require ad un file nominato : 
+"bootstrap.php => require_once("bootstrap.php")". All'interno di tale file ci dovranno essere tutta una serie di operazioni
+preliminari per impostare tutta una serie di variabili, creare la connessione al database e così via. Una volta che 
+tutte le operazioni preliminari sono state svolte il controllo tornerà direttamente al file index.php. In php si possono
+creare delle strutture dati apposite che ricordano tanto le VIEWBAG di C#. E' possibile creare mappe/dizionari ad esempio
+
+$myDict["a"]=1
+$myDict["b"]=2
+$map["myKey"]=list_of_objects
+
+e tale struttura dati potrà poi essere utilizzata all'interno della pagina contenente HTML.
+
+All'interno del codice HTML se si vuole indicare una sezione con PHP bisognerà segnalarlo attraverso il codie : 
+<?php 
+    CODE HERE
+?>
+
+All'interno di tale linguaggio è possibile utilizzare anche dei foreach con la quale aggiungere dinamicamente porzioni
+di HTML. Ad esempio :
+
+<?php foreach($map["myKey"] as $object): ?>
+    <a href="#">
+        <?php $object["nome"] ?>
+    </a>
+<?php endforeach ?>
+
+In questo modo verranno aggiunti dinamicamente N tag <a> tanti quanti sono gli oggetti contenuti in $map["myKey"].
