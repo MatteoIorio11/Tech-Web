@@ -36,10 +36,11 @@ body > nav, body > aside, body > section{
 L’elemento <section> deve occupare il 50% della larghezza e deve avere padding
  e margin simili a quelli mostrati nello screenshot.
 */
-section{
+body section{
+    float : right;
     width: 50%;
-    margin: 20px 10px;
-    padding: 10px 25px;
+    margin: 0px 10px 65px 0px;
+    padding: 10px 5px;
 
 }
 
@@ -56,8 +57,9 @@ e deve avere padding e margini simili a quelli mostrati nello screenshot.
 Lo sfondo di <nav> consiste in un gradiente uguale a quello di <header>
 */
 body nav{
+    float: left;
     width: 15%;
-    margin: 10px 10px;
+    margin: 10px 0px 0px 5px;
     padding: 5% 5px;
     background: linear-gradient(to bottom right, pink, yellow, pink, #B300FF );
     border-top: 2px solid #B300FF;
@@ -88,9 +90,9 @@ nav:hover{
 /*
 L’elemento <aside> deve occupare il 20% della larghezza e i suoi paragrafi devono avere colore viola.
 */
-aside{
+body aside{
     width: 20%;
-    margin: 20px 10px;
+    margin: 0px 50px 0px 15px;
     padding: 10px 25px;
 
 }
@@ -103,10 +105,11 @@ La sua larghezza è pari al 100%.
 Margin e padding devono essere simili a quelli riportati nello screenshot.*/
 
 footer{
+    clear:both;
     border-top: 2px solid #B300FF;
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
     width: 100%;
-    margin: 10px 0px;
+    margin: 50px 0px 0px 0px;
     padding: 15px 0px;
 }
 /*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
