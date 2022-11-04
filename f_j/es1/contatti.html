@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+    <!-- TITLE OF THE WEB SITE -->
+    <!-- the lang attribute is a MUST -->
+    <head lang="it">
+        <title> Blog di Tecnologie Web - Contatti </title>
+        <link rel="stylesheet" href="style/style.css">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <!-- HEADER OF OUR PAGE -> h1 is the title -->
+        <header>
+            <h1>Blog di Tecnologie Web</h1>
+        </header>
+
+        <!-- NAV BAR WITH FOUR LINKS -->
+        <nav>
+            <ul> 
+                <li> <a href="./index.html">Home</a> </li>
+                <li> <a href="./archivio.html">Archivio</a> </li>
+                <li> <a href="./contatti.html">Contatti</a> </li>
+                <li> <a href="./login.html">Login</a> </li>
+            </ul>
+        </nav>
+
+
+
+        <main>
+        <!-- TABLE WITH DATAS -->
+            <h2>Autori del Blog</h2>
+            <section>
+                <table>
+                    <thead>
+                        <!-- FIRST ROW OF ELEMENTS, ALL HEADERS -->
+                        <tr>
+                            <th id="autore" scope="col">Autore</th>
+                            <th id="email" scope="col">Email</th>
+                            <th id="argomenti" scope="col">Argomenti</th>
+                        </tr>
+                    </thead>
+                    <!-- ALL THE DATAS -->
+                    <tbody>
+                        <tr>
+                            <th id="gino" headers="autore gino" scope="row">Gino Pino</th>
+                            <td headers="email gino"><a href="mailto:ginopino@blogtw.com">ginopino@blogtw.com</a></td>
+                            <td headers="argomenti gino">HTML, CSS, JS</td>
+                        </tr>
+                        <tr>
+                            <th id="cippa" headers="autore cippa" scope="row">Cippa Lippa</th>
+                            <td headers="email cippa"><a href="mailto:cippalippa@blogtw.com">cippalippa@blogtw.com</a></td>
+                            <td headers="argomenti cippa">PHP</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <p>Tecnologie Web - A.A 2019/2020</p>
+        </footer>
+    </body>
