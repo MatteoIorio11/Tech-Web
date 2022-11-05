@@ -60,6 +60,28 @@ class DatabaseHelper{
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getArticleFromID($n){
+        $query = "SELECT * FROM articolo, autore WHERE articolo.autore=autore.idautore AND idarticolo=?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $n);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function getArticlesFromCategory($n){
+        $query = "SELECT * 
+        FROM articolo_ha_categoria, articolo, autore
+        WHERE articolo_ha_categoria.articolo=articolo.idarticolo
+        AND articolo.autore=autore.idautore
+        AND articolo_ha_categoria.categoria=?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $n);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
 }
 
 ?>

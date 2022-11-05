@@ -33,7 +33,7 @@
             <h2>Categorie</h2>
             <ul>
                 <?php foreach($templateParams["categorie"] as $categoria) :?>
-                <li><a href="#"> <?php echo $categoria["nomecategoria"]; ?></a></li>
+                <li><a href="categorie.php?cat=<?php echo $categoria['idcategoria']; ?>"> <?php echo $categoria["nomecategoria"]; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </section>

@@ -105,6 +105,7 @@ La sua larghezza è pari al 100%.
 Margin e padding devono essere simili a quelli riportati nello screenshot.*/
 
 footer{
+    position: fixed;
     clear:both;
     border-top: 2px solid #B300FF;
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
