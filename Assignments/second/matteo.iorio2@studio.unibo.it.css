@@ -111,7 +111,6 @@ footer{
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
     width: 100%;
     padding: 15px 0px;
-    margin-top: -200px;
     bottom: 20px;    
 }
 /*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
