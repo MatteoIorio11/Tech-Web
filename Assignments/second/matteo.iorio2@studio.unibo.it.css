@@ -39,7 +39,7 @@ L’elemento <section> deve occupare il 50% della larghezza e deve avere padding
 body section{
     float : right;
     width: 50%;
-    margin: 0px 10px 10px 0px;
+    margin: 0px 10px 5% 0px;
     padding: 10px 5px;
 
 }
@@ -106,12 +106,10 @@ Margin e padding devono essere simili a quelli riportati nello screenshot.*/
 
 footer{
     clear:both;
-    position: absolute;
     border-top: 2px solid #B300FF;
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
     width: 100%;
     padding: 15px 0px;
-    bottom: 20px;
     /*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
     /*
         Non ho messo tali proprietà all'interno di p poiché viene detto: "il testo in footer* e non :" il testo del paragrafo
