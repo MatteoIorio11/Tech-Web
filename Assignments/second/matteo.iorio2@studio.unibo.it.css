@@ -17,14 +17,14 @@ header{
     padding-top: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid #B300FF;
-}
-/*
-Il testo in <header> è di colore viola ed è allineato a destra.
-*/
-header h1{
+    /*
+    Il testo in <header> è di colore viola ed è allineato a destra. Ho messo tali proprietà all'interno di header e non dentro
+    H1 poiché non viene detto : "il testo del figlio di <header> è : .... ". 
+    */
     color: #B300FF;
     text-align: right;
 }
+
 /*
 L’elemento <nav>, l’elemento <aside> e l’elemento <section> sono affiancati, uno accanto all’altro.
 */
@@ -111,10 +111,12 @@ footer{
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
     width: 100%;
     padding: 15px 0px;
-    bottom: 20px;    
-}
-/*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
-footer p{
+    bottom: 20px;
+    /*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
+    /*
+        Non ho messo tali proprietà all'interno di p poiché viene detto: "il testo in footer* e non :" il testo del paragrafo
+        figlio di <footer>" 
+    */
     text-align: center;
     color: #B300FF;
     font-size: 80%;
