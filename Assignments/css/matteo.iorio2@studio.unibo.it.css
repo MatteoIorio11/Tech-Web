@@ -91,7 +91,7 @@ L’elemento <aside> deve occupare il 20% della larghezza e i suoi paragrafi dev
 */
 body aside{
     width: 20%;
-    margin: 0px 20px 0px 15px;
+    margin: 0px 60px 0px 15px;
     padding: 10px 25px;
 
 }
