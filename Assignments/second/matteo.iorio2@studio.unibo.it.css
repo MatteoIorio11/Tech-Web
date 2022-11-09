@@ -13,9 +13,8 @@ La sua larghezza è pari al 100%.
 header{
     background: linear-gradient(to bottom right, pink, yellow, pink, #B300FF );   
     width: 100%;
-    margin-top: 5px;
-    padding-top: 10px;
-    padding-bottom: 5px;
+    margin: 5px 0px;
+    padding: 10px 0px;
     border-bottom: 2px solid #B300FF;
     /*
     Il testo in <header> è di colore viola ed è allineato a destra. Ho messo tali proprietà all'interno di header e non dentro
@@ -73,7 +72,7 @@ ed hanno interlinea pari a 2 volte il valore di default.
 nav ul{
     list-style: square;
     text-align: left;
-    line-height: 220%;
+    line-height: 200%;
 }
 /*I link in <nav> in caso di hover vengono mostrati con sfondo viola, colore bianco,
  in grassetto e con un padding pari ad almeno l’1%.*/
