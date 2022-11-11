@@ -14,7 +14,11 @@
                 <p><?php echo $articolo["anteprimaarticolo"]; ?></p>
             </section>
             <footer>
+<<<<<<< HEAD
                 <a href="articolo.php?id=<?php echo $articolo["idarticolo"]; ?>">Leggi tutto</a>
+=======
+                <a href="articolo.php?id=<?php echo $articolo['idarticolo'];?>">Leggi tutto</a>
+>>>>>>> bc306d50ff3a707d639c0ab78dac1dbc9d7c8351
             </footer>
         </article>
         <?php endforeach; ?>

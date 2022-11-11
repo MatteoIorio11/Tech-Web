@@ -35,9 +35,15 @@
         <section>
             <h2>Categorie</h2>
             <ul>
+<<<<<<< HEAD
             <?php foreach($templateParams["categorie"] as $categoria): ?>
                 <li><a href="articoli-categoria.php?id=<?php echo $categoria["idcategoria"]; ?>"><?php echo $categoria["nomecategoria"]; ?></a></li>
             <?php endforeach; ?>
+=======
+                <?php foreach($templateParams["categorie"] as $categoria) :?>
+                <li><a href="categorie.php?cat=<?php echo $categoria['idcategoria']; ?>"> <?php echo $categoria["nomecategoria"]; ?></a></li>
+                <?php endforeach; ?>
+>>>>>>> bc306d50ff3a707d639c0ab78dac1dbc9d7c8351
             </ul>
         </section>
     </aside>

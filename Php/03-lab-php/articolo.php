@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 require_once 'bootstrap.php';
 
 //Base Template
@@ -14,4 +15,16 @@ if(isset($_GET["id"])){
 $templateParams["articolo"] = $dbh->getPostById($idarticolo);
 
 require 'template/base.php';
+=======
+require_once("bootstrap.php");
+
+$templateParams["titolo"] ="Blog TW - Home";
+$templateParams["nome"]="articolo-singolo.php";
+$templateParams["articolicasuali"] = $dbh->getRandomPosts(2);
+$templateParams["categorie"] = $dbh->getCategories();
+$templateParams["articolo"] = $dbh->getArticleFromID($_GET['id']);
+
+require_once("template/base.php");
+//var_dump($dbh->getRandomPosts(2));
+>>>>>>> bc306d50ff3a707d639c0ab78dac1dbc9d7c8351
 ?>

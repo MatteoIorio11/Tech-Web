@@ -33,3 +33,25 @@ di HTML. Ad esempio :
 <?php endforeach ?>
 
 In questo modo verranno aggiunti dinamicamente N tag <a> tanti quanti sono gli oggetti contenuti in $map["myKey"].
+
+
+--- GESTIONE DELLE GET --- 
+
+Se per esempio noi volessimo aprire una pagina specifica ad un determinato oggetto. Potremmo costruire un URL al cui interno
+troviamo l'id del nostro oggetto. 
+**
+<?php foreach($map["myKey"] as $object): ?>
+    <a href="pagina.php?id=<?php echo $object["id"];?>">
+        <?php $object["nome"] ?>
+    </a>
+<?php endforeach ?>
+**
+
+In questo esempio se dovessimo cliccare sul link seguente il nostro URL sarebbe del tipo : 
+www.????.??/pagina1.php/pagina_object.php?id=X
+dove X è l'id esatto del singolo oggetto. Successivamente se vogliamo poi ottenere tale id(X) ed utilizzarlo nella pagina :
+pagina_php.php dovremmo avere la sua pagina di riferimento es :pagina.php al cui interno dovremmo avere tale istruzione:
+ ----> $templateParams["singleObject"] = $database->getObjectFromID($_GET['id']); 
+In questo modo automaticamente si estrae dal nostro URL l'identificatore del nostro Object, quindi X. Poi successivamente,
+interrogheremo il nostro database per avere il singolo Object e lui potrà poi essere utilizzato all'interno della 
+nostra pagina_object.php

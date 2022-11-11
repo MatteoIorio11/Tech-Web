@@ -13,18 +13,17 @@ La sua larghezza è pari al 100%.
 header{
     background: linear-gradient(to bottom right, pink, yellow, pink, #B300FF );   
     width: 100%;
-    margin-top: 5px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin: 5px 0px;
+    padding: 10px 0px;
     border-bottom: 2px solid #B300FF;
-}
-/*
-Il testo in <header> è di colore viola ed è allineato a destra.
-*/
-header h1{
+    /*
+    Il testo in <header> è di colore viola ed è allineato a destra. Ho messo tali proprietà all'interno di header e non dentro
+    H1 poiché non viene detto : "il testo del figlio di <header> è : .... ". 
+    */
     color: #B300FF;
     text-align: right;
 }
+
 /*
 L’elemento <nav>, l’elemento <aside> e l’elemento <section> sono affiancati, uno accanto all’altro.
 */
@@ -39,7 +38,7 @@ L’elemento <section> deve occupare il 50% della larghezza e deve avere padding
 body section{
     float : right;
     width: 50%;
-    margin: 0px 10px 65px 0px;
+    margin: 0px 10px 5% 0px;
     padding: 10px 5px;
 
 }
@@ -73,7 +72,7 @@ ed hanno interlinea pari a 2 volte il valore di default.
 nav ul{
     list-style: square;
     text-align: left;
-    line-height: 220%;
+    line-height: 200%;
 }
 /*I link in <nav> in caso di hover vengono mostrati con sfondo viola, colore bianco,
  in grassetto e con un padding pari ad almeno l’1%.*/
@@ -92,7 +91,7 @@ L’elemento <aside> deve occupare il 20% della larghezza e i suoi paragrafi dev
 */
 body aside{
     width: 20%;
-    margin: 0px 50px 0px 15px;
+    margin: 0px 60px 0px 15px;
     padding: 10px 25px;
 
 }
@@ -109,12 +108,14 @@ footer{
     border-top: 2px solid #B300FF;
     background: linear-gradient(to top left, pink, yellow, pink, #B300FF );
     width: 100%;
-    margin: 50px 0px 0px 0px;
     padding: 15px 0px;
-}
-/*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
-footer p{
+    /*Il testo in <footer> è di colore viola, è allineato al centro ed ha una dimensione pari all’80%.*/
+    /*
+        Non ho messo tali proprietà all'interno di p poiché viene detto: "il testo in footer* e non :" il testo del paragrafo
+        figlio di <footer>" 
+    */
     text-align: center;
     color: #B300FF;
     font-size: 80%;
+    margin: 20% 0px 10px 0px;
 }
