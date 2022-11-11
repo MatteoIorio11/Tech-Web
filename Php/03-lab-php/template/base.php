@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> <?php echo $templateParams["titolo"]; ?> </title>
+    <title><?php echo $templateParams["titolo"]; ?></title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
 </head>
 <body>
@@ -11,30 +11,33 @@
     </header>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li><li><a href="archivio.php">Archivio</a></li><li><a href="contatti.php">Contatti</a></li><li><a href="login.php">Login</a></li>
+            <li><a <?php isActive("index.php");?> href="index.php">Home</a></li><li><a <?php isActive("archivio.php");?> href="archivio.php">Archivio</a></li><li><a <?php isActive("contatti.php");?> href="contatti.php">Contatti</a></li><li><a <?php isActive("login.php");?> href="login.php">Login</a></li>
         </ul>
     </nav>
     <main>
-        <?php require($templateParams["nome"]);?>
+    <?php
+    if(isset($templateParams["nome"])){
+        require($templateParams["nome"]);
+    }
+    ?>
     </main><aside>
         <section>
             <h2>Post Casuali</h2>
             <ul>
-                <?php
-                    foreach($templateParams["articolicasuali"] as $articolocasuale):?>
-                    <li>
-                        <img src="<?php echo UPLOAD_DIR.$articolocasuale["imgarticolo"]; ?>" alt=""/>
-                        <a href="#" > <?php echo $articolocasuale["titoloarticolo"];?></a>
-                    </li>
-                <?php endforeach; ?>
+            <?php foreach($templateParams["articolicasuali"] as $articolocasuale): ?>
+                <li>
+                    <img src="<?php echo UPLOAD_DIR.$articolocasuale["imgarticolo"]; ?>" alt="" />
+                    <a href="articolo.php?id=<?php echo $articolocasuale["idarticolo"]; ?>"><?php echo $articolocasuale["titoloarticolo"]; ?></a>
+                </li>
+            <?php endforeach; ?>
             </ul>
         </section>
         <section>
             <h2>Categorie</h2>
             <ul>
-                <?php foreach($templateParams["categorie"] as $categoria) :?>
-                <li><a href="#"> <?php echo $categoria["nomecategoria"]; ?></a></li>
-                <?php endforeach; ?>
+            <?php foreach($templateParams["categorie"] as $categoria): ?>
+                <li><a href="articoli-categoria.php?id=<?php echo $categoria["idcategoria"]; ?>"><?php echo $categoria["nomecategoria"]; ?></a></li>
+            <?php endforeach; ?>
             </ul>
         </section>
     </aside>

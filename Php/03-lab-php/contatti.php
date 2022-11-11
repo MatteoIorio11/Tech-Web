@@ -1,11 +1,13 @@
 <?php
-require_once("bootstrap.php");
+require_once 'bootstrap.php';
 
-$templateParams["titolo"] ="Blog TW - Home";
-$templateParams["nome"]="contatti-style.php";
-$templateParams["articolicasuali"] = $dbh->getRandomPosts(2);
+//Base Template
+$templateParams["titolo"] = "Blog TW - Contatti";
+$templateParams["nome"] = "contatti.php";
 $templateParams["categorie"] = $dbh->getCategories();
-$templateParams["articoli"] = $dbh->getPosts(2);
+$templateParams["articolicasuali"] = $dbh->getRandomPosts(2);
+//Home Template
 $templateParams["autori"] = $dbh->getAuthors();
 
-require_once("template/base.php");
+require 'template/base.php';
+?>
