@@ -1,6 +1,8 @@
-
         <form action="#" method="POST">
             <h2>Login</h2>
+            <?php if(isset($templateParams["errorelogin"])): ?>
+            <p><?php echo $templateParams["errorelogin"]; ?></p>
+            <?php endif; ?>
             <ul>
                 <li>
                     <label for="username">Username:</label><input type="text" id="username" name="username" />

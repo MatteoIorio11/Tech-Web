@@ -14,4 +14,4 @@
             <a href="#">Leggi tutto</a>
         </footer>
 </article>
-<?php endforeach; ?>
+<?php endforeach; ?>    
