@@ -1,0 +1,33 @@
+DOMANDA : Elencare e descrivere brevemente i tre standard alla base del Web 
+
+RISPOSTA : Alla base del web troviamo tre macro standard che permettono di farlo funzionare. Partiamo dal più semplice dei tre:
+    1) HTML (HyperText Markup Language): è un linguaggio di markup e non un linguaggio di programmazzione come il C, C++ e così via. Il linguaggio
+             html, è un linguaggio di markup di tipo DESCRITTIVO, con ciò si intende il fatto che attravero questa tecnologia
+             si identifica strutturalmente il tipo di ogni elemento. Questo vuol dire che attraverso html, noi possiamo
+             solamente  definire gli aspetti grafici ad esempio andando a specificare che una determinata porzione di
+             testo è un paragrafo, un'altra sezione di testo invece rappresenta un titolo e così via. Il nostro HTML
+             si compone di TAG, i quali sono rappresentati dagli operatori "<" e ">". I quali servono ad aprire e chiudere
+             il tag. Ogni tag ha un proprio nome (<p></p>, <h1></h1>, ..) inoltre ogni tag può avere una serie di attributi, 
+             i quali sono una coppia di nome-valore (class=x, id=y, ..). Affiancato al nostro html possiamo trovare un 
+             altro linguaggio che ci permette invece di rappresentare lo stile dei nostri elementi, tale linguaggio 
+             si chiama CSS. Ricordiamo sempre che HTML è un living standard in continuo aggiornamento.
+    2) URI (Uniform Resource Identifier): All'interno del web, bisogna poter identificare in maniera univoca le varie risorse nel globo.
+            Attraverso gli URI riusciamo ad accedere alle risorse come se stessimo navigando all'interno di un file system.
+            Se ad esempio ci trovassimo in un sito web, X.com e volessimo accedere alla sua pagina index.html, ci basterebbe
+            digitare all'interno del URL : X.com/index.html. In questo modo riusciremo ad accedere alla risorsa di nostro interesse.
+    3) HTTP (HyperText Transfer Protocol) : Http è un protocollo di comunicazione basato sul modello Client-Server:
+            Client : è colui che richiede delle risorse  (es : Browser). 
+            Server : è colui che inoltra le vaire risorse richieste (es : Apache).
+            Il protocollo HTTP si basa sulla porta numero 80 e non supporta alcuna protezione a differenza del fratello HTTPS il quale invece 
+            cripta la comunicazione rendendola più sicura ( porta 443 ). Il protocollo HTTP è formato 3 da operazioni principali : 
+                GET : viene richiesta una risorsa e tale richiesta la si può vedere anche all'interno del URL, 
+                      X.com/index.php?<id=1> capiamo che siamo nel caso di una get poiché viene espressa dopo il carattere "?". Attraverso l'uso delle 
+                      GET è inoltre possibile inviare dati al nostro server, il problema è che tali risorse sono completamente esposte di conseguenza
+                      non è ottimale per inoltrare dati sensibili. In sostanza i dati vengono inseriti all'interno del header HTTP.
+                POST : 
+                     Attraverso il metodo POST è possibile inviare dati, ad esempio dati di una form, o altre informazioni ma in maniera molto più sicura
+                     poiché i dati vengono inseriti all'interno del body HTTP. Ciò non toglie comunque che i nostri dati siano rischio poiché
+                     HTTP non cripta i dati e per avere la sicurezza maggiore bisognerà utilizzare il metodo POST usando però il protocollo HTTPS.
+                PUT :
+                    Viene utilizzato per creare una nuova risorsa o per sovrascriverne una già esistente sul server. 
+            
