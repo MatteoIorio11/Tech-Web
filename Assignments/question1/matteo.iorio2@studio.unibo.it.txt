@@ -18,9 +18,7 @@ RISPOSTA : Alla base del web troviamo tre macro standard che permettono di farlo
             E' possibile anche adottare strategie per indirizzi troppo lunghi ad esempio se un URL è troppo lungo a causa della risorsa che si sta
             cercando, o per altri motivi è possibile adottare strategie lato server con la quale si può fare un hashing del percorso e mantenere
             una hash table per accedere in maniera veloce alla risorsa cercata.
-
             google.com/dir1/dir2/dir3/dir4/dir5/...../dirN/file.html => google.com/IEJKWUHWGRBET
-
             E attraverso "IEJKWUHWGRBET" potrò accedere a "dir1/dir2/dir3/dir4/dir5/...../dirN/file.html" senza che il client debba fare nulla.
     3) HTTP (HyperText Transfer Protocol) : Http è un protocollo di comunicazione basato sul modello Client-Server:
             Client : è colui che richiede delle risorse  (es : Browser). 
