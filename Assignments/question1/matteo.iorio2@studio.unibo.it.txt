@@ -14,12 +14,8 @@ RISPOSTA : Alla base del web troviamo tre macro standard che permettono di farlo
     2) URI (Uniform Resource Identifier): All'interno del web, bisogna poter identificare in maniera univoca le varie risorse nel globo.
             Attraverso gli URI riusciamo ad accedere alle risorse come se stessimo navigando all'interno di un file system.
             Se ad esempio ci trovassimo in un sito web, X.com e volessimo accedere alla sua pagina index.html, ci basterebbe
-            digitare all'interno del URL : X.com/index.html. In questo modo riusciremo ad accedere alla risorsa di nostro interesse.
-            E' possibile anche adottare strategie per indirizzi troppo lunghi ad esempio se un URL è troppo lungo a causa della risorsa che si sta
-            cercando, o per altri motivi è possibile adottare strategie lato server con la quale si può fare un hashing del percorso e mantenere
-            una hash table per accedere in maniera veloce alla risorsa cercata.
-            google.com/dir1/dir2/dir3/dir4/dir5/...../dirN/file.html => google.com/IEJKWUHWGRBET
-            E attraverso "IEJKWUHWGRBET" potrò accedere a "dir1/dir2/dir3/dir4/dir5/...../dirN/file.html" senza che il client debba fare nulla.
+            digitare all'interno del URL : X.com/index.html. In questo modo riusciremo ad accedere alla risorsa di nostro interesse. Qualsiasi URI deve 
+            essere inserito all'interno del URL.
     3) HTTP (HyperText Transfer Protocol) : Http è un protocollo di comunicazione basato sul modello Client-Server:
             Client : è colui che richiede delle risorse  (es : Browser). 
             Server : è colui che inoltra le vaire risorse richieste (es : Apache).
