@@ -1,0 +1,6 @@
+article > header img{
+    max-height: 200px;
+}
+aside img{
+    max-height: 50px;
+}
