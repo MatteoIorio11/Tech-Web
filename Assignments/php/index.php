@@ -5,8 +5,6 @@
 
 */
 
-use LDAP\Result;
-
 function checkInsieme($dbh, $insieme, $who){
     $query = "SELECT * FROM insiemi WHERE insieme = ?";
     $stmt = $dbh->prepare($query);
