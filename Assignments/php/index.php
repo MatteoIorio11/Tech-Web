@@ -35,6 +35,11 @@ function castToInt($values){
 }
 
 function unionValues($values_A, $values_B){
+    print("OPERAZIONE : UNIONE" . "<br>" );
+    print("VALORI INSIEME A : ");
+    printValues($values_A);
+    print("<br>" . "VALORI INSIEME B : ");
+    printValues($values_B);
     return  array_unique (array_merge ($values_A, $values_B));
 }
 
@@ -55,7 +60,18 @@ function addToDB($dbh, $result){
     }
 }
 
+function printValues($values){
+    foreach($values as $val){
+        echo($val . " ");
+    }
+}
+
 function intersectValues($values_A, $values_B){
+    print("OPERAZIONE : INTERSEZIONE" . "<br>" );
+    print("VALORI INSIEME A : ");
+    printValues($values_A);
+    print("<br>" . "VALORI INSIEME B : ");
+    printValues($values_B);
     return array_intersect($values_A, $values_B);
 }
 
@@ -80,7 +96,8 @@ function intersectValues($values_A, $values_B){
             }
             if(count($result) > 0){
                 addToDB($dbh, $result);
-                print("Tutti i valori sono stati aggiunti");
+                echo("<br>". "Tutti i valori sono stati aggiunti : ");
+                printValues($result);
             }
 
         }else{
