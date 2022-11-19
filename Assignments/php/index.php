@@ -5,6 +5,7 @@
 
 */
 
+use LDAP\Result;
 
 function checkInsieme($dbh, $insieme, $who){
     $query = "SELECT * FROM insiemi WHERE insieme = ?";
@@ -26,13 +27,39 @@ function getAllValues($dbh, $insieme){
     return $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 }
 
-function unionValues($values_A, $values_B){
+function castToInt($values){
+    //So che questo metodo puo non aver senso, ma i confronti tra interi vengono fatti piu rapidamente
     $result = array();
-    
+    foreach($values as $val){
+        array_push($result, (int) $val["valore"]);
+    }
+    return $result;
+}
+
+function unionValues($values_A, $values_B){
+    return array_merge($values_A, $values_B);
+}
+
+function getMaxID($dbh){
+    $query = "SELECT MAX(insieme) FROM insiemi";
+    $stmt = $dbh->prepare($query);
+    $stmt->execute();    
+    return $stmt->get_result()->fetch_all(MYSQLI_ASSOC)[0]["MAX(insieme)"] + 1;
+}
+
+function addToDB($dbh, $result){
+    $id_insieme = getMaxID($dbh);
+    $query = "INSERT INTO insiemi (valore, insieme) 
+              VALUES (?, ?)";
+    $stmt = $dbh->prepare($query);
+    foreach($result as $value){
+        $stmt->bind_param('i', $value, $id_insieme);
+        $stmt->execute();
+    }
 }
 
 function intersectValues($values_A, $values_B){
-    var_dump(array_intersect($values_A, $values_B));
+    return array_intersect($values_A, $values_B);
 }
 
     if(isset($_GET["A"]) && isset($_GET["B"]) && isset($_GET["O"])){
@@ -52,9 +79,11 @@ function intersectValues($values_A, $values_B){
             if($operazione == "u"){
                 $result = unionValues($values_A, $values_B);
             }else{
-                intersectValues($values_A, $values_B);
+                $result = intersectValues(castToInt($values_A), castToInt($values_B));
             }
-            var_dump($result);
+            if(count($result) > 0){
+                addToDB($dbh, $result);
+            }
 
         }else{
             $msg="Uno dei tre parametri non soddisfa i parametri di dominio: A, B > 0 e O == i o O == u";
