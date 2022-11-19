@@ -1,10 +1,4 @@
 <?php
-//$ sudo /opt/lampp/lampp start
-/*Controllare che le variabili "A" e "B" non siano nulle e che siano valide,
-    ovvero che siano numeri positivi e che sul db ci siano numeri appartenenti a quell'insieme.
-
-*/
-
 function checkInsieme($dbh, $insieme, $who){
     $query = "SELECT * FROM insiemi WHERE insieme = ?";
     $stmt = $dbh->prepare($query);
@@ -85,16 +79,21 @@ function intersectValues($values_A, $values_B){
             if ($dbh->connect_error) {
                 die("Connection failed: " . $dbh->connect_error);
             }
+            //Controllare che le variabili "A" e "B" non siano nulle e che siano valide, ovvero che siano numeri positivi e che sul db ci siano numeri appartenenti a quell'insieme.
             checkInsieme($dbh, $insieme_a, "A");
             checkInsieme($dbh, $insieme_b, "B");
+            //Leggere tutti i numeri appartenenti a ciascun insieme (A e B) su database e inserirli in due vettori distinti.
             $values_A = getAllValues($dbh, $insieme_a);
             $values_B = getAllValues($dbh, $insieme_b);
             if($operazione == "u"){
+                //Creare un nuovo vettore contenente l'unione dei due insiemi se O vale u
                 $result = unionValues(castToInt($values_A), castToInt($values_B));
             }else{
+                // altrimenti dovrà contenere l'intersezione dei due insiemi
                 $result = intersectValues(castToInt($values_A), castToInt($values_B));
             }
             if(count($result) > 0){
+                //Inserire sul db il nuovo insieme, usando come id dell'insieme il successivo all'id massimo.
                 addToDB($dbh, $result);
                 echo("<br>". "I seguenti valori sono stati aggiunti : ");
                 printValues($result);
