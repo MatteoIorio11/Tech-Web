@@ -37,7 +37,7 @@ function castToInt($values){
 }
 
 function unionValues($values_A, $values_B){
-    return array_merge($values_A, $values_B);
+    return  array_unique (array_merge ($values_A, $values_B));
 }
 
 function getMaxID($dbh){
@@ -49,11 +49,10 @@ function getMaxID($dbh){
 
 function addToDB($dbh, $result){
     $id_insieme = getMaxID($dbh);
-    $query = "INSERT INTO insiemi (valore, insieme) 
-              VALUES (?, ?)";
+    $query = "INSERT INTO insiemi (valore, insieme) VALUES (?, ?)";
     $stmt = $dbh->prepare($query);
     foreach($result as $value){
-        $stmt->bind_param('i', $value, $id_insieme);
+        $stmt->bind_param('ii', $value, $id_insieme);
         $stmt->execute();
     }
 }
@@ -77,12 +76,13 @@ function intersectValues($values_A, $values_B){
             $values_A = getAllValues($dbh, $insieme_a);
             $values_B = getAllValues($dbh, $insieme_b);
             if($operazione == "u"){
-                $result = unionValues($values_A, $values_B);
+                $result = unionValues(castToInt($values_A), castToInt($values_B));
             }else{
                 $result = intersectValues(castToInt($values_A), castToInt($values_B));
             }
             if(count($result) > 0){
                 addToDB($dbh, $result);
+                print("Tutti i valori sono stati aggiunti");
             }
 
         }else{
