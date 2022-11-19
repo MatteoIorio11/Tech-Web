@@ -96,7 +96,7 @@ function intersectValues($values_A, $values_B){
             }
             if(count($result) > 0){
                 addToDB($dbh, $result);
-                echo("<br>". "Tutti i valori sono stati aggiunti : ");
+                echo("<br>". "I seguenti valori sono stati aggiunti : ");
                 printValues($result);
             }
 
