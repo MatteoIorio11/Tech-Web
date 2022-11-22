@@ -1,6 +1,6 @@
 <?php
 function checkInsieme($dbh, $insieme, $who){
-    $query = "SELECT * FROM insiemi WHERE insieme = ?";
+    $query = "SELECT * FROM insiemi WHERE insiemi.insieme = ?";
     $stmt = $dbh->prepare($query);
     $stmt->bind_param('i', $insieme);
     $stmt->execute();
@@ -29,10 +29,10 @@ function castToInt($values){
 }
 
 function unionValues($values_A, $values_B){
-    print("OPERAZIONE : UNIONE" . "<br>" );
+    print("OPERAZIONE : UNIONE" . "<br/>" );
     print("VALORI INSIEME A : ");
     printValues($values_A);
-    print("<br>" . "VALORI INSIEME B : ");
+    print("<br/>" . "VALORI INSIEME B : ");
     printValues($values_B);
     return  array_unique (array_merge ($values_A, $values_B));
 }
@@ -61,10 +61,10 @@ function printValues($values){
 }
 
 function intersectValues($values_A, $values_B){
-    print("OPERAZIONE : INTERSEZIONE" . "<br>" );
+    print("OPERAZIONE : INTERSEZIONE" . "<br/>" );
     print("VALORI INSIEME A : ");
     printValues($values_A);
-    print("<br>" . "VALORI INSIEME B : ");
+    print("<br/>" . "VALORI INSIEME B : ");
     printValues($values_B);
     return array_intersect($values_A, $values_B);
 }
@@ -95,16 +95,18 @@ function intersectValues($values_A, $values_B){
             if(count($result) > 0){
                 //Inserire sul db il nuovo insieme, usando come id dell'insieme il successivo all'id massimo.
                 addToDB($dbh, $result);
-                echo("<br>". "I seguenti valori sono stati aggiunti : ");
+                echo("<br/>". "I seguenti valori sono stati aggiunti : ");
                 printValues($result);
             }
 
         }else{
-            $msg="Uno dei tre parametri non soddisfa i parametri di dominio: A, B > 0 e O == i o O == u";
+            $msg="Uno dei tre parametri non soddisfa i parametri di dominio: A, B > 0 e O == i o O == u. <br/>".
+            "Valore di A : ".$_GET["A"]." VALORE DI B : ".$_GET["B"]." VALORE DI O : ".$_GET["O"];
             print($msg);
         }
     }else{
-        $msg = "Uno dei tre parametri inseriti è NULLO";
+        $msg = "Uno o piu parametri inseriti sono NULLI <br/>".
+        "Valore di A : ".(isset($_GET["A"]) ? ($_GET["A"]) : "NULL")." VALORE DI B : ".(isset($_GET["B"]) ? ($_GET["B"]) : "NULL")." VALORE DI O : ".(isset($_GET["O"]) ? ($_GET["O"]) : "NULL");
         print($msg);
     }
 ?>
