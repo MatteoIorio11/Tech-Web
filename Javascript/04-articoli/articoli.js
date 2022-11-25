@@ -23,7 +23,7 @@ datiArticoli.forEach(element => {
             </div>
         </header>
         <h2>${element["Titolo"]}</h2>
-        <p>${element["Data"]}</p>
+        <p>${element["Data"]} - ${element["Autore"]}</p>
         <section>
             <p>${element["Testo"]}</p>
         </section>
