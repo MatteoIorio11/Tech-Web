@@ -13,7 +13,7 @@ document.querySelectorAll("input")[1].addEventListener("click", function(){
 });
 
 document.querySelectorAll("input")[2].addEventListener("click", function(){
-    let text = divP.innerHTML;
+    let text = divP.innerText;
     text = text.substring(5) + text.substring(0, 5);
     divP.innerHTML = text;  
 });
