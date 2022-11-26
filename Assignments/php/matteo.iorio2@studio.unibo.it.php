@@ -130,4 +130,5 @@ class Database{
         "Valore di A : ".(isset($_GET["A"]) ? ($_GET["A"]) : "NULL")." VALORE DI B : ".(isset($_GET["B"]) ? ($_GET["B"]) : "NULL")." VALORE DI O : ".(isset($_GET["O"]) ? ($_GET["O"]) : "NULL");
         print($msg);
     }
+
 ?>
