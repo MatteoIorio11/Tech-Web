@@ -29,3 +29,10 @@ function generaTabella(autori){
     return table;
 }
 
+axios.get("api-contatti.php").then(response => {
+    console.log(response);  
+    const autori = generaTabella(response["data"]);  
+    const main = document.querySelector("main");
+    main.innerHTML = autori;
+});
+

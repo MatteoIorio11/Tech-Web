@@ -49,4 +49,16 @@ function generaArticoli(articoli){
     
     return result;
 }
+let logged = false;
 
+axios.get("api-login.php").then(response => {
+    console.log(response);
+    logged = response["data"]; 
+});
+
+axios.post("api-login.php").then(response => {
+    if(response["data"] === true){
+    }else{
+        generaLoginForm();
+    }
+});

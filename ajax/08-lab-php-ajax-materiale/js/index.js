@@ -23,3 +23,9 @@ function generaArticoli(articoli){
     }
     return result;
 }
+
+axios.get("api-articolo.php").then(response => {
+    const articoli = generaArticoli(response["data"]);
+    const main = document.querySelector("main");
+    main.innerHTML +=articoli;
+});
