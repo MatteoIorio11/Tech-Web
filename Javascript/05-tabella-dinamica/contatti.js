@@ -1,12 +1,14 @@
 const datiTabella = [{
     "Autore": "Gino Pino",
     "Email": "ginopino@blogtw.com",
-    "Argomenti": "HTML, CSS, JS"
+    "Argomenti": "HTML, CSS, JS",
+    "AOOO" : "aoo"
 },
 {
     "Autore": "Cippa Lippa",
     "Email": "cippalippa@blogtw.com",
-    "Argomenti": "PHP"
+    "Argomenti": "PHP",
+    "AOOO" : "aooAOOOO"
 }]
 
 function stringaToID(stringa){
